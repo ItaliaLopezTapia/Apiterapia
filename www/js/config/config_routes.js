@@ -7,8 +7,18 @@ $stateProvider
 			cache: false,
 			url: "/",
 			templateUrl: "templates/bienvenido.html",
-			controller: "bienvenidoController"
+			controller: "bienvenido_controller"
 		})
-    $urlRouterProvider.otherwise("/");
+
+
+.state("login", {
+			cache: false,
+			url: "/login",
+			templateUrl: "templates/login.html",
+			controller: "login_controller"
+		})
+
+$urlRouterProvider.otherwise("/");
+
 });
 }).call(this);
